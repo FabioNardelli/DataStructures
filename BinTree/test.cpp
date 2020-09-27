@@ -77,7 +77,7 @@ int main()
     tree.bfs(tree.root());
 
     // cancella il sottoalbero avente radice       //      1        //
-    // nel nodo con etichettta 3	               //    /          //
+    // nel nodo con etichettta 3                   //    /          //
     tree.deleteSubTree(current);                   //   2           //
 
     // stampa l'albero

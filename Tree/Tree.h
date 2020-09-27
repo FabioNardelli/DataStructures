@@ -245,21 +245,21 @@ void Tree<T>::deleteSubTree(Node<T> *n)
             deleteSubTree(current);
             current = tmp;
         }
-        if (n != rootPtr) { 			// Se n non e' la radice, allora ha un genitore.
-            Node<T> *p = parent(n); 	// Fa puntare p al genitore di n e:
+        if (n != rootPtr) {             // Se n non e' la radice, allora ha un genitore.
+            Node<T> *p = parent(n);     // Fa puntare p al genitore di n e:
             if (firstChild(p) == n) { 	// se n e' il primo figlio di p,
                                         // imposta il puntatore al primo figlio di p al fratello
                 p->child = n->sibling; 	// successivo di n (NIL se n e' figlio unico).
-            } else {					// Se invece n non e' il primo figlio di p, fa puntare p
-                p = p->child; 			// al suo primo figlio, current al fratello
+            } else {                    // Se invece n non e' il primo figlio di p, fa puntare p
+                p = p->child;           // al suo primo figlio, current al fratello
                 current = p->sibling;   // successivo di quest'ultimo e,
                 while (current != n) {  // fintantoche' current != n, fa puntare
-                    p = current;		// p a current e current al prossimo fratello.
+                    p = current;        // p a current e current al prossimo fratello.
                     current = current->sibling; // Quando current == n, vuol dire
-                }						// che p punta al fratello precedente di n; allora fa puntare
+                }                       // che p punta al fratello precedente di n; allora fa puntare
                 p->sibling = n->sibling;// il puntatore al prossimo fratello di p
-            }		            		// al fratell successivo a n (NIL se non ha
-            delete n;              		// un fratello successivo)
+            }                           // al fratell successivo a n (NIL se non ha
+            delete n;                   // un fratello successivo)
         } else {
             rootPtr = 0;
         }

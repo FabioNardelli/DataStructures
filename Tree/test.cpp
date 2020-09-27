@@ -24,14 +24,14 @@ int main()
 
     // aggiunge due nodi all'albero                       //       1       //
     Node<int> *n2 = new Node<int>(2),                     //     /   \     //
-        *n3 = new Node<int>(4);                           //   2       4   //
+            *n3 = new Node<int>(4);                       //   2       4   //
     tree.insertChild(tree.root(), n2);                    //               //
     tree.insertSibling(tree.firstChild(tree.root()), n3);
 
     // stampa l'albero usando l'operatore << in overload
     cout << "Aggiunti tre nodi come figli"
-         << " \ndella radice, con etichette"
-         << " 2 e 4:" << tree;
+            << " \ndella radice, con etichette"
+            << " 2 e 4:" << tree;
 
     // aggiunge un sottoalbero di tre nodi
     // (si fa uso dell'inizializizazione tramite costruttore)
@@ -42,7 +42,7 @@ int main()
     t1.insertChild(t1.root(), n);                         //     / | \     //
     t1.insertSibling(t1.firstChild(t1.root()), n1);       //   2   3   4   //
     tree.insertSibling(tree.firstChild                    //     /   \     //
-        (tree.root()), t1.root());                        //    5     6    //
+            (tree.root()), t1.root());                    //    5     6    //
 
     Node<int> *current = tree.nextSibling
             (tree.firstChild(tree.root()));
@@ -82,7 +82,7 @@ int main()
     tree.bfs(tree.root());
 
     // cancella il sottoalbero avente radice              //      1        //
-    // nel nodo con etichettta 3	                      //    /   \      //
+    // nel nodo con etichettta 3                          //    /   \      //
     tree.deleteSubTree(current);                          //   2     4     //
 
     // stampa l'albero
@@ -104,7 +104,7 @@ int main()
     // testa le funzioni addAsChild e addAsSibling        //        1      //
     tree.addAsChild(tree.firstChild(tree.root()), 7);     //      /   \    //
     tree.addAsSibling(tree.firstChild                     //     2     4   //
-        (tree.firstChild(tree.root())), 8);				  //   /   \       //
+            (tree.firstChild(tree.root())), 8);	          //   /   \       //
     cout << "\nAggiunti due nodi con etichette"           //  7     8      //
          << " 7 e 8:" << tree;
 
