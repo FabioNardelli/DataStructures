@@ -37,7 +37,7 @@ private:
     T *array; // puntatore per rappresentare l'array circolare che contiene la coda
     int head; // posizione dell'elemento di testa
     int size; // numero di elementi contenuti nell'array, e' la
-    // dimensione della coda come appare all'utente
+              // dimensione della coda come appare all'utente
     int capacity; // dimensione dell'array
     static const int defaultCapacity = 16; // dimensione di default
     void create(int); // funzione di inizializzazione
@@ -105,8 +105,8 @@ ArrayQueue<T> &ArrayQueue<T>::operator=(const ArrayQueue<T> &q)
 {
     if (&q != this) { // evita l'autoassegnazione
         if (capacity != q.capacity) { // se i due array hanno capacita' diversa,
-            delete [] array;       	  // dealloca quello di sinistra e alloca
-            capacity = q.capacity; 	  // un nuovo array di capacita' uguale
+            delete [] array;          // dealloca quello di sinistra e alloca
+            capacity = q.capacity;    // un nuovo array di capacita' uguale
             array = new T[capacity];  // a quello da copiare
         }
 
