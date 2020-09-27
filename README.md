@@ -14,5 +14,5 @@ Simple data structures in C++ made for the Algorithms and Data Structures course
 * **PriorityQueue** - priority queue made with a dynamic heap  
 * **Graph** - graph made with a dynamic array of adjacency lists  
   
-These files have been compiled with GCC 6.3.0 (MinGW) with the options `'-Wall -Wextra -pedantic-errors'`  
+These files have been compiled with GCC 6.3.0 (MinGW) with the options `-Wall -Wextra -pedantic-errors`  
 and debugged with gdb, but they haven't been tested thoroughly, so there may still be some bugs.
