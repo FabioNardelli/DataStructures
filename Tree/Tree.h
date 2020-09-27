@@ -258,7 +258,7 @@ void Tree<T>::deleteSubTree(Node<T> *n)
                     current = current->sibling; // Quando current == n, vuol dire
                 }                       // che p punta al fratello precedente di n; allora fa puntare
                 p->sibling = n->sibling;// il puntatore al prossimo fratello di p
-            }		                    // al fratell successivo a n (NIL se non ha
+            }                           // al fratell successivo a n (NIL se non ha
             delete n;                   // un fratello successivo)
         } else {
             rootPtr = 0;
