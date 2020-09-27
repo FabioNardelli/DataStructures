@@ -60,7 +60,7 @@ public:
 private:
     T *array; // puntatore usato per la rappresentazione dell'array che contiene la lista
     int size; // numero di elementi contenuti nell'array, e' la
-    // dimensione della lista come appare all'utente
+              // dimensione della lista come appare all'utente
     int capacity; // dimensione dell'array
 
     static const int defaultCapacity = 16;

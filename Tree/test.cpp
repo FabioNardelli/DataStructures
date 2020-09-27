@@ -50,26 +50,26 @@ int main()
     // mostra l'altezza dei nodi con etichette
     // 1, 3 e 5
     cout << "\nPROPRIETA' DELL'ALBERO\n"
-            << "Altezza nodo con etichetta 1: "
-            << tree.height(tree.root())
-            << "\nAltezza nodo con etichetta 3: "
-            << tree.height(current)
-            << "\nAltezza nodo con etichetta 5: "
-            << tree.height(tree.firstChild(current)) << "\n";
+         << "Altezza nodo con etichetta 1: "
+         << tree.height(tree.root())
+         << "\nAltezza nodo con etichetta 3: "
+         << tree.height(current)
+         << "\nAltezza nodo con etichetta 5: "
+         << tree.height(tree.firstChild(current)) << "\n";
 
     // stampa il numero di nodi dei sottoalberi aventi radice
     // nei nodi con etichetta 2, 3 e 1(intero albero)	
     cout << "\nN. nodi nel sottoalbero con etichetta 2: "
-            << tree.count(tree.firstChild(tree.root()))
-            << "\nN. nodi nel sottoalbero con etichetta 3: "
-            << tree.count(current)
-            << "\nN. nodi nell'intero albero "
-            << "\n(sottoalbero con etichetta 1):           "
-            << tree.count(tree.root()) << "\n";
+         << tree.count(tree.firstChild(tree.root()))
+         << "\nN. nodi nel sottoalbero con etichetta 3: "
+         << tree.count(current)
+         << "\nN. nodi nell'intero albero "
+         << "\n(sottoalbero con etichetta 1):           "
+         << tree.count(tree.root()) << "\n";
 
     // visite in profondita' (Depth First Search)
     cout << "\nVISITE IN PROFONDITA' (DFS)\n"
-            << "\nVisita in pre-ordine:\n";
+         << "\nVisita in pre-ordine:\n";
     tree.preOrder(tree.root());
     cout << "\nVisita in ordine(i = 1):\n";
     tree.inOrder(tree.root(), 1);
@@ -87,26 +87,26 @@ int main()
 
     // stampa l'albero
     cout << "\nELIMINAZIONE NODI\nEliminazione sottoalbero"
-            << " con etichetta 3:" << tree;
+         << " con etichetta 3:" << tree;
 
     // testa l'operatore =
     Tree<int> tree1;
     tree1 = tree;
     cout << "\nOPERATORE DI ASSEGNAZIONE\n"
-            << "crea un albero 'tree1'\ntree1 = tree\ntree1:" << tree1;
+         << "crea un albero 'tree1'\ntree1 = tree\ntree1:" << tree1;
 
     // cancella l'albero tree1 (copia di tree), dimostrando
     // il funzionamento dell'operatore =
     tree1.deleteSubTree(tree1.root());
     cout << "\nELIMINAZIONE ALBERO\nEliminazione tree1\ntree1: "
-            << tree1 << "\ntree:" << tree;
+         << tree1 << "\ntree:" << tree;
 
     // testa le funzioni addAsChild e addAsSibling        //        1      //
     tree.addAsChild(tree.firstChild(tree.root()), 7);     //      /   \    //
     tree.addAsSibling(tree.firstChild                     //     2     4   //
             (tree.firstChild(tree.root())), 8);		      //   /   \       //
     cout << "\nAggiunti due nodi con etichette"           //  7     8      //
-            << " 7 e 8:" << tree;
+         << " 7 e 8:" << tree;
 
     // mantiene aperto il terminale
     int x;
