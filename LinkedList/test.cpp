@@ -57,7 +57,7 @@ int main()
     // rimozione elementi
     list.remove(list.end());
     cout << "\nFUNZIONE remove\nRimosso ultimo elemento da 'list'\n"
-            << list;
+         << list;
     list.popBack();
     list.popFront();
     cout << "\nFUNZIONI popFront E popBack\nRimossi primo e ultimo"

@@ -32,7 +32,7 @@ int main()
 
     // restituisce il minimo
     cout << "\nL'elemento con la priorita' piu' alta(valore minimo) e':\n"
-            << q.min();
+         << q.min();
 
     // cancella il minimo (l'elemento con la priorita' piu' alta)
     q.deleteMin();
