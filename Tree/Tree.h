@@ -67,7 +67,7 @@ public:
     void print() const;
     int height(Node<T> *) const; // restituisce l'altezza del nodo
     int count(Node<T> *) const;	 // restituisce il numero dei nodi discendenti
-    // del nodo indicato
+                                 // del nodo indicato
     // algoritmi di visita
     // visite in profondita' (DFS)
     void preOrder(Node<T> *) const;
@@ -248,7 +248,7 @@ void Tree<T>::deleteSubTree(Node<T> *n)
         if (n != rootPtr) { 			// Se n non e' la radice, allora ha un genitore.
             Node<T> *p = parent(n); 	// Fa puntare p al genitore di n e:
             if (firstChild(p) == n) { 	// se n e' il primo figlio di p,
-                // imposta il puntatore al primo figlio di p al fratello
+                                        // imposta il puntatore al primo figlio di p al fratello
                 p->child = n->sibling; 	// successivo di n (NIL se n e' figlio unico).
             } else {					// Se invece n non e' il primo figlio di p, fa puntare p
                 p = p->child; 			// al suo primo figlio, current al fratello

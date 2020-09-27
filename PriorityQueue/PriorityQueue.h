@@ -123,7 +123,7 @@ PriorityQueue<T> &PriorityQueue<T>::operator=(const PriorityQueue<T> &h)
         if (capacity != h.capacity) { // se i due array hanno capacita'
             delete [] heap;           // diversa, dealloca quello di sinistra
             capacity = h.capacity;    // e alloca un nuovo array di capacita'
-            // uguale a quello da copiare
+                                      // uguale a quello da copiare
             heap = new PriorityItem[capacity];
         }
 
@@ -276,7 +276,7 @@ void PriorityQueue<T>::print() const
 
     for (int i = 0; i < size; ++i) {
         std::cout << std::setw(3) << "(" << heap[i].value
-                << "," << heap[i].priority << ") ";
+            << "," << heap[i].priority << ") ";
         // va a capo ogni 5 elementi, tranne dopo l'ultimo
         if ((i + 1) % 5 == 0 && i != size - 1)
             std::cout << "\n  ";

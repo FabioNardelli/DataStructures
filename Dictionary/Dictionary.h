@@ -133,7 +133,7 @@ Dictionary<K, V> &Dictionary<K, V>::operator=(const Dictionary<K, V> &d)
         if (capacity != d.capacity) { // se i due array hanno dimensione
             delete [] table;          // diversa, dealloca quello di sinistra
             capacity = d.capacity;    // e alloca un nuovo array di capacita'
-            // uguale a quello da copiare
+                                      // uguale a quello da copiare
             table = new PairList[capacity];
         }
 

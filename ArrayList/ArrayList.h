@@ -197,7 +197,7 @@ template <typename T>
 void ArrayList<T>::insert(Position pos, T item) 
 {
     if (((pos < 0 || pos >= size) && size > 0)
-            || (pos < 0 && size == 0)) {
+        || (pos < 0 && size == 0)) {
         std::cerr << "Cannot insert: Position must be 0 - (size - 1)\n";
         return;
     }
@@ -367,7 +367,7 @@ const T &ArrayList<T>::read(Position pos) const
 
     if (pos < 0 || pos >= size)
         throw std::out_of_range("Invalid position! "
-                "Position must be 0 - (size - 1)");
+            "Position must be 0 - (size - 1)");
 
     return array[pos];
 }
@@ -378,7 +378,7 @@ void ArrayList<T>::write(Position pos, T item)
 {
     if (pos < 0 || pos >= size) {
         std::cerr << "Invalid position! "
-                << "Position must be 0 - (size - 1)";
+            << "Position must be 0 - (size - 1)";
         return;
     } else {
         array[pos] = item;
@@ -404,7 +404,7 @@ bool ArrayList<T>::operator==(const ArrayList<T> &l) const
 
     // controllo rapido sul primo e l'ultimo elemento di ciascuna lista
     if (array[0] != l.array[0]
-                            || array[size - 1] != l.array[size - 1])
+        || array[size - 1] != l.array[size - 1])
         return false;
 
     // controllo esaustivo su ciascun elemento dal secondo al penultimo

@@ -196,7 +196,7 @@ bool LinkedStack<T>::operator==(const LinkedStack<T> &s) const
 
     // controllo rapido sul primo e l'ultimo elemento di ciascuna pila
     if (head->next->value != s.head->next->value
-            || head->previous->value != s.head->previous->value)
+        || head->previous->value != s.head->previous->value)
         return false;
 
     // controllo esaustivo su ciascun elemento

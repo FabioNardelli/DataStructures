@@ -307,7 +307,7 @@ bool LinkedList<T>::operator==(const LinkedList<T> &l) const
 
     // controllo rapido sul primo e l'ultimo elemento di ciascuna lista
     if (head->next->value != l.head->next->value
-            || head->previous->value != l.head->previous->value)
+        || head->previous->value != l.head->previous->value)
         return false;
 
     // controllo esaustivo su ciascun elemento

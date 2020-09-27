@@ -190,7 +190,7 @@ Graph<L, W> &Graph<L, W>::operator=(const Graph<L, W> &g)
         if (capacity != g.capacity) { // se i due array hanno dimensione
             delete [] nodes;          // diversa, dealloca quello di sinistra
             capacity = g.capacity;    // e alloca un nuovo array di capacita'
-            // uguale a quello da copiare
+                                      // uguale a quello da copiare
             nodes = new NodeElement[capacity];
         }
 
@@ -290,7 +290,7 @@ bool Graph<L, W>::hasEdge(const Node<L> &n1, const Node<L> &n2) const
     // scandisce la lista di adiacenza alla ricerca del nodo n2
     // se lo trova, restituisce true...
     typename LinkedList<Adjacent>::Position pos =
-            nodes[n1.id].adjList.begin();
+        nodes[n1.id].adjList.begin();
 
     while (!nodes[n1.id].adjList.finished(pos)) {
         if (nodes[n1.id].adjList.read(pos).adjNode->id == n2.id)
@@ -320,7 +320,7 @@ void Graph<L, W>::removeNode(Node<L> &n)
     // elimina eventuali archi entranti
     for (int i = 0; i < size; ++i) {
         typename LinkedList<Adjacent>::Position pos =
-                nodes[i].adjList.begin();
+            nodes[i].adjList.begin();
         bool removed = false;
 
         while (!nodes[i].adjList.finished(pos) && !removed) {
@@ -357,7 +357,7 @@ void Graph<L, W>::removeEdge(Node<L> &n1, Node<L> &n2)
     }
 
     typename LinkedList<Adjacent>::Position pos =
-            nodes[n1.id].adjList.begin();
+        nodes[n1.id].adjList.begin();
 
     while (!nodes[n1.id].adjList.finished(pos)) {
         if (nodes[n1.id].adjList.read(pos).adjNode->id == n2.id) {
@@ -386,7 +386,7 @@ typename Graph<L, W>::NodeList Graph<L, W>::neighbors(const Node<L> &n) const
     // altrimenti, restituisce list dopo avervi inserito
     // i nodi presenti nella lista di adiacenza di n
     typename LinkedList<Adjacent>::Position pos =
-            nodes[n.id].adjList.begin();
+        nodes[n.id].adjList.begin();
 
     while (!nodes[n.id].adjList.finished(pos)) {
         list.pushBack(nodes[n.id].adjList.read(pos).adjNode);
@@ -449,7 +449,7 @@ W Graph<L, W>::readEdge(const Node<L> &n1, const Node<L> &n2) const
 
     // cerca nella lista di adiacenza di n1 il nodo n2
     typename LinkedList<Adjacent>::Position pos =
-            nodes[n1.id].adjList.begin();
+        nodes[n1.id].adjList.begin();
 
     while (!nodes[n1.id].adjList.finished(pos)) {
 
@@ -476,7 +476,7 @@ void Graph<L, W>::writeEdge(Node<L> &n1, Node<L> &n2, W w)
 
     // cerca nella lista di adiacenza di n1 il nodo n2
     typename LinkedList<Adjacent>::Position pos =
-            nodes[n1.id].adjList.begin();
+        nodes[n1.id].adjList.begin();
 
     while (!nodes[n1.id].adjList.finished(pos)) {
 

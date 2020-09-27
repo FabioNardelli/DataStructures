@@ -24,7 +24,7 @@ int main()
 
     // aggiunge due nodi all'albero                       //       1       //
     Node<int> *n2 = new Node<int>(2),                     //     /   \     //
-            *n3 = new Node<int>(4);                           //   2       4   //
+        *n3 = new Node<int>(4);                           //   2       4   //
     tree.insertChild(tree.root(), n2);                    //               //
     tree.insertSibling(tree.firstChild(tree.root()), n3);
 
