@@ -203,7 +203,7 @@ bool LinkedStack<T>::operator==(const LinkedStack<T> &s) const
     Node *thisStackPtr = head->next;
     Node *otherStackPtr = s.head->next;
     while (thisStackPtr->value == otherStackPtr->value
-            && thisStackPtr != head && otherStackPtr != s.head) {
+        && thisStackPtr != head && otherStackPtr != s.head) {
         thisStackPtr = thisStackPtr->next;
         otherStackPtr = otherStackPtr->next;
     }

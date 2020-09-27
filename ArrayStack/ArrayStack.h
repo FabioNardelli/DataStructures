@@ -196,7 +196,7 @@ bool ArrayStack<T>::operator==(const ArrayStack<T> &s) const
 
     // controllo rapido sul primo e l'ultimo elemento di ciascuna pila
     if (array[0] != s.array[0]
-                            || array[size - 1] != s.array[size - 1])
+        || array[size - 1] != s.array[size - 1])
         return false;
 
     // controllo esaustivo su ciascun elemento dal secondo al penultimo

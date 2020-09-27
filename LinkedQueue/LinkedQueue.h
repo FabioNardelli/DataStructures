@@ -194,14 +194,14 @@ bool LinkedQueue<T>::operator==(const LinkedQueue<T> &q) const
 
     // controllo rapido sul primo e l'ultimo elemento di ciascuna coda
     if (head->next->value != q.head->next->value
-            || head->previous->value != q.head->previous->value)
+        || head->previous->value != q.head->previous->value)
         return false;
 
     // controllo esaustivo su ciascun elemento
     Node *thisQueuePtr = head->next;
     Node *otherQueuePtr = q.head->next;
     while (thisQueuePtr->value == otherQueuePtr->value
-            && thisQueuePtr != head && otherQueuePtr != q.head) {
+        && thisQueuePtr != head && otherQueuePtr != q.head) {
         thisQueuePtr = thisQueuePtr->next;
         otherQueuePtr = otherQueuePtr->next;
     }

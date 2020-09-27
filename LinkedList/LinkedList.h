@@ -314,7 +314,7 @@ bool LinkedList<T>::operator==(const LinkedList<T> &l) const
     Position thisListPtr = begin();
     Position otherListPtr = l.begin();
     while (thisListPtr->value == otherListPtr->value
-            && thisListPtr != head && otherListPtr != l.head) {
+        && thisListPtr != head && otherListPtr != l.head) {
         thisListPtr = thisListPtr->next;
         otherListPtr = otherListPtr->next;
     }
