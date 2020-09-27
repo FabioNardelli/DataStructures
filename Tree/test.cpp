@@ -104,7 +104,7 @@ int main()
     // testa le funzioni addAsChild e addAsSibling        //        1      //
     tree.addAsChild(tree.firstChild(tree.root()), 7);     //      /   \    //
     tree.addAsSibling(tree.firstChild                     //     2     4   //
-            (tree.firstChild(tree.root())), 8);				  //   /   \       //
+        (tree.firstChild(tree.root())), 8);				  //   /   \       //
     cout << "\nAggiunti due nodi con etichette"           //  7     8      //
          << " 7 e 8:" << tree;
 
