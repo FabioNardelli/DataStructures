@@ -1,4 +1,4 @@
-# DataStructures
+# data-structures
 Simple data structures in C++ made for the Algorithms and Data Structures course
 
 ### Contents:
